@@ -26,6 +26,7 @@ setup(
     'console_scripts': [
         'follower_node = multi_robot_follow.follower_node:main',
         'leader_waypoint_node = multi_robot_follow.leader_waypoint_node:main',
+        'triangle_formation = multi_robot_follow.triangle_formation:main',
     ],
 },
 
