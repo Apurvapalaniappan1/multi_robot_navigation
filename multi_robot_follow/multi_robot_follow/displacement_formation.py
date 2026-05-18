@@ -43,7 +43,7 @@ class DisplacementFormation(Node):
         self.phase = 'forming'
 
         # Goal for the anchor/reference robot
-        self.formation_goal = (-2.2, -0.6)
+        self.formation_goal = (-2.0, -0.5)
 
         self.pause_counter = 0
         self.pause_steps = 30
