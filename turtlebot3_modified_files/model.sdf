@@ -44,12 +44,11 @@
         
 
         <collision name='two_two'>
-          <pose>0 0 0.25 0 0 0</pose>
+          <pose>0.3 0.35 0.25 0 0 0</pose>
           <geometry>
-            <cylinder>
-              <radius>0.15</radius>
-              <length>0.5</length>
-            </cylinder>
+            <box>
+              <size>0.4 0.4 0.5</size>
+            </box>
           </geometry>
           <max_contacts>10</max_contacts>
           <surface>
@@ -64,12 +63,11 @@
         </collision>
 
         <visual name='two_two'>
-          <pose>0 0 0.25 0 0 0</pose>
+          <pose>0.3 0.35 0.25 0 0 0</pose>
           <geometry>
-            <cylinder>
-              <radius>0.15</radius>
-              <length>0.5</length>
-            </cylinder>
+            <box>
+              <size>0.4 0.4 0.5</size>
+            </box>
           </geometry>
           <material>
             <script>
@@ -79,41 +77,7 @@
           </material>
         </visual>
 
-        <collision name='two_three'>
-          <pose>0 1.1 0.25 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.15</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <bounce/>
-            <friction>
-              <ode/>
-            </friction>
-            <contact>
-              <ode/>
-            </contact>
-          </surface>
-        </collision>
-
-        <visual name='two_three'>
-          <pose>0 1.1 0.25 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.15</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/White</name>
-            </script>
-          </material>
-        </visual>
+       
 
         <collision name='three_one'>
           <pose>1.1 -1.1 0.25 0 0 0</pose>
@@ -151,41 +115,7 @@
           </material>
         </visual>
 
-        <collision name='three_two'>
-          <pose>1.1 0 0.25 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.15</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <bounce/>
-            <friction>
-              <ode/>
-            </friction>
-            <contact>
-              <ode/>
-            </contact>
-          </surface>
-        </collision>
-
-        <visual name='three_two'>
-          <pose>1.1 0 0.25 0 0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.15</radius>
-              <length>0.5</length>
-            </cylinder>
-          </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/White</name>
-            </script>
-          </material>
-        </visual>
+       
 
         <collision name='three_three'>
           <pose>1.1 1.1 0.25 0 0 0</pose>
