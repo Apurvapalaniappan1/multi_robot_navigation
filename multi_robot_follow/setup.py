@@ -26,6 +26,7 @@ setup(
     'console_scripts': [
         'triangle_formation = multi_robot_follow.triangle_formation:main',
         'displacement_formation = multi_robot_follow.displacement_formation:main',
+        'collision_formation = multi_robot_follow.collision_formation:main',
     ],
 },
 
