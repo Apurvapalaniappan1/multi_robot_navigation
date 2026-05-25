@@ -43,6 +43,7 @@ class DisplacementFormation(Node):
 
         self.goal_tolerance = 0.20
         self.goal_reached_tolerance = 0.45
+        self.max_neighbor_distance_seen = 0.0
         self.phase = 'forming'
 
         # Known obstacles from model.sdf.
@@ -339,6 +340,20 @@ class DisplacementFormation(Node):
               return True
 
          return False
+    def log_neighbor_distances(self):
+        for robot in self.robots:
+            for neighbor in self.neighbors[robot]:
+                if robot < neighbor:
+                   xi, yi, _ = self.poses[robot]
+                   xj, yj, _ = self.poses[neighbor]
+
+                   distance = math.sqrt((xj - xi) ** 2 + (yj - yi) ** 2)
+
+                   if distance > self.max_neighbor_distance_seen:
+                      self.max_neighbor_distance_seen = distance
+                      self.get_logger().info(
+                          f'NEW_MAX_NEIGHBOR_DISTANCE {robot}-{neighbor}: {distance:.2f} m'
+                      )
 
     def control_loop(self):
         if not all(robot in self.poses for robot in self.robots):
@@ -383,6 +398,8 @@ class DisplacementFormation(Node):
                 self.phase = 'moving'
 
         elif self.phase == 'moving':
+
+            self.log_neighbor_distances()
 
             goal_x, goal_y = self.waypoints[self.current_waypoint_index]
             anchor_x, anchor_y, _ = self.poses[self.anchor]
