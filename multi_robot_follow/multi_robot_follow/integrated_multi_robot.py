@@ -50,7 +50,7 @@ class DisplacementFormation(Node):
         self.tb1_recovery_done = False
 
         # Known obstacles from model.sdf.
-        # The two_two box is intentionally excluded because it is treated as unknown/LiDAR-only.
+        # The two_two box and one-one cylinder is intentionally excluded because it is treated as unknown/LiDAR-only.
         self.known_obstacles = [
              (-1.1, 1.1),   # one_three
              (1.1, -1.1),   # three_one
