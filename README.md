@@ -191,13 +191,13 @@ multi_robot_navigation/
 ## Simulation Results
 
 ### Displacement-Based Formation
-![Displacement Formation](images/formation.png)
+![Displacement Formation](images/Displacement_formation.png)
 
 ### Collision Avoidance
-![Collision Avoidance](images/collision.png)
+![Collision Avoidance](images/Collision_avoidance.png)
 
 ### Integrated Cooperative Mission
-![Integrated Mission](images/integrated.png)
+![Integrated Mission](images/Integrated_mission.png)
 
 ---
 
