@@ -15,7 +15,7 @@ setup(
     zip_safe=True,
     maintainer='Apurva Palaniappan',
     maintainer_email='apurva.p2024@gmail.com',
-    description='Cooperative Multi-Robot Navigation in a Warehouse-like Environment',
+    description='Cooperative Multi-Robot Navigation TurtleBot3 in ROS 2 Humble and Gazebo',
     license='MIT',
     extras_require={
         'test': [
