@@ -13,10 +13,10 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='user',
-    maintainer_email='your_github_email_here',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    maintainer='Apurva Palaniappan',
+    maintainer_email='apurva.p2024@gmail.com',
+    description='Cooperative Multi-Robot Navigation for TurtleBot3 using ROS 2',
+    license='MIT',
     extras_require={
         'test': [
             'pytest',
