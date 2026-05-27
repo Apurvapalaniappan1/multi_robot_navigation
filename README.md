@@ -1,4 +1,4 @@
-# Cooperative Multi-Robot Navigation in a Warehouse-like Environment
+# Cooperative Multi-Robot Navigation with TurtleBot3 in ROS 2 Humble and Gazebo
 
 This project implements cooperative multi-robot navigation using **3 TurtleBot3 Burger robots** in **ROS 2 Humble** and **Gazebo**.
 
@@ -21,8 +21,6 @@ The objective is to coordinate multiple mobile robots in a shared indoor environ
 - safe inter-robot distance
 - obstacle avoidance
 - communication/connectivity links
-
-The selected use-case is a **warehouse-like indoor navigation scenario**, where multiple robots move cooperatively while avoiding obstacles and maintaining group behaviour.
 
 ---
 
