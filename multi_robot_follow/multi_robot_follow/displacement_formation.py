@@ -31,12 +31,12 @@ class DisplacementFormation(Node):
 
         self.poses = {}
 
-        self.k_formation = 0.8
-        self.k_goal = 0.5
-        self.k_angular = 1.5
+        self.k_formation = 1.1
+        self.k_goal = 0.7
+        self.k_angular = 2.0
 
-        self.max_linear = 0.10
-        self.max_angular = 0.6
+        self.max_linear = 0.16
+        self.max_angular = 0.9
 
         self.goal_tolerance = 0.20
         self.goal_reached_tolerance = 0.45
@@ -158,6 +158,11 @@ class DisplacementFormation(Node):
                     continue
 
                 ux, uy = self.formation_vector(robot)
+                formation_error = math.sqrt(ux**2 + uy**2)
+
+                self.get_logger().info(
+                    f'{robot}: formation error = {formation_error:.2f}'
+                )
                 cmd, reached = self.vector_to_cmd(robot, ux, uy)
 
                 if not reached:
