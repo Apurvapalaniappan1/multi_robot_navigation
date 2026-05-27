@@ -26,8 +26,9 @@ setup(
     'console_scripts': [
         'displacement_formation = multi_robot_follow.displacement_formation:main',
         'collision_avoidance_only = multi_robot_follow.collision_avoidance_only:main',
-        'integrated_multi_robot = multi_robot_follow.integrated_multi_robot:main',
         'connectivity_maintenance_only = multi_robot_follow.connectivity_maintenance_only:main',
+        'integrated_multi_robot = multi_robot_follow.integrated_multi_robot:main',
+        
         
     ],
 },
